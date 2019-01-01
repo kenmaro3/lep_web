@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SkyWay - Video chat example</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Language" content="en-us">
+
+  <link rel="stylesheet" href="/static/css/style.css">
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='script.js') }}"></script>
+  <script type=text/javascript src="{{ url_for('static', filename='key.js') }}"></script>
+</head>
+
+<body>
+
+<div class="pure-g">
+
+  <!-- Video area -->
+  <div class="pure-u-2-3" id="video-container">
+    <video id="their-video" autoplay playsinline></video>
+    <video id="my-video" muted="true" autoplay playsinline></video>
+    <div class="switch">
+        <label class="switch__label">
+          <input type="checkbox" class="switch__input" id="video-switch" checked="checked"/>
+          <span class="switch__content"></span>
+          <span class="switch__circle"></span>
+        </label>
+    </div>
+
+  </div>
+
+  <!-- Steps -->
+  <div class="pure-u-1-3">
+    <h2>Language Exchange Platform</h2>
+    <h3>Video Chat</h3>
+
+
+    <div class="select">
+      <label for="audioSource">Audio input source: </label><select id="audioSource"></select>
+    </div>
+
+    <div class="select">
+      <label for="videoSource">Video source: </label><select id="videoSource"></select>
+    </div>
+
+    <!-- Get local audio/video stream -->
+    <div id="step1">
+      <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>
+      <div id="step1-error">
+        <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click allow when asked for permission by the browser.</p>
+        <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
+      </div>
+    </div>
+
+    <!-- Make calls to others -->
+    <div id="step2">
+      <!--<p>Your id: <span id="my-id">...</span></p>-->
+      <p># of people now: <span id="num-of-peers">...</span></p>
+      <p>Peers: <span id="peers">...</span></p>
+      <p>Share this id with others so they can call you.</p>
+      <h3>Make a call to specific person</h3>
+      <form id="make-call" class="pure-form">
+        <input type="text" placeholder="Call user id..." id="callto-id">
+        <button href="#" class="pure-button pure-button-success" type="submit">Call</button>
+      </form>
+      <h3>Make a random match</h3>
+      <form id="make-random-call" class="pure-form">
+        <span>Let's find a mate you can practice with!!</span>
+        <button href="#" class="pure-button pure-button-success" type="submit">Random Call</button>
+
+      </form>
+    </div>
+
+    <!-- Call in progress -->
+    <div id="step3">
+      <p>Currently in call with <span id="their-id">...</span> !! </p>
+      <p><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></p>
+      <div>
+        If you find difficult what to talk, take a look at here to see the topics or grammar and just speak it out!!!
+      </div>
+
+      <!--###############-->
+      <div class="cp_tab">
+        <input type="radio" name="cp_tab" id="tab2_1" aria-controls="first_tab02" checked>
+        <label for="tab2_1">topic</label>
+        <input type="radio" name="cp_tab" id="tab2_2" aria-controls="second_tab02">
+        <label for="tab2_2">Grammar</label>
+
+        <div class="cp_tabpanels">
+          <div class="cp_tabpanel">
+          <h2>Topics you can use as an example</h2>
+          <h2>Friends</h2>
+          <ul>
+            <li>Tell him/her about your best friend</li>
+            <li>How did you get know with your best friend?</li>
+            <li>What is your favorite activity that you do with your best friend?</li>
+            <li>Do you have more male friends or female friends?</li>
+
+          </ul>
+          <h2>Shopping</h2>
+            <li>Do you like the shopping?</li>
+            <li>Do you like your favorite brand and why?</li>
+            <li>Do you have something you want to buy at this moment?</li>
+          </ul>
+          <h2>Home Town</h2>
+          <ul>
+            <li>Where is your home town? Is it located in which part of your country? Explain.</li>
+            <li>Is there any specialities in your home town? Describe it.</li>
+            <li>Is there any famous locations in your home town? Describe it.</li>
+          </ul>
+          <h2>Job</h2>
+            <ul>
+              <li>What kind of job are you working on? Explain.</li>
+              <li>Why did you choose the current job?</li>
+              <li>If you can change your job, what kind of job would it be?</li>
+            </ul>
+          <h2>Food</h2>
+            <ul>
+              <li>What kind of food do you like and why?</li>
+              <li>Do you have any favorite restaurant around you? and why?</li>
+              <li>Do you cook usually? If yes, what do you cook?</li>
+            </ul>
+          </div>
+          <div class="cp_tabpanel">
+          <h2>Grammar that you want to study</h2>
+          <h2>Comparison</h2>
+            as ~ as
+            <ul>
+              <li>This building is as large as that building.</li>
+              <li>He is not as tall as her.</li>
+            </ul>
+          <h2>Should have</h2>
+            <ul>
+              <li>I did not prepare for the exam yesterday, but I should have studied last night..</li>
+              <li>Why did you say no to him? You shouldn't have done like that.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- From here TEXT CHAT -->
+
+<div id="actions">
+  <h2>Text Chat</h2>
+  Your Peer ID is <span id="pid"></span><br>
+  Connect to a peer:
+  <form id="connect">
+    <input type="text" id="rid" placeholder="Someone else's id">
+    <input class="button" type="submit" value="Connect">
+  </form>
+  <br>
+  <br>
+  <form id="send">
+    <input type="text" id="text" placeholder="Enter message">
+    <input class="button" type="submit" value="Send to selected peers">
+  </form>
+  <button id="close">Close selected connections</button>
+</div>
+
+<div id="wrap"><div id="connections"><span class="filler">You have not yet
+        made any connections.</span></div>
+  <div class="clear"></div></div>
+
+<div id="box" style="background: #fff; font-size: 18px;padding:40px 30px; text-align: center;">
+  Drag file here to send to active connections.
+</div>
+
+
+<div class="warning browser">
+  <div class="important">Your browser version: <span id="browsers"></span><br>
+    Currently <strong>Google Chrome 52+ or Mozilla Firefox 47+</strong> is required.</strong></div>
+</div>
+
+
+</body>
+</html>
