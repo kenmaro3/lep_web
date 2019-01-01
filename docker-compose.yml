@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  api:
+    image: api
+    ports: ["8081:8081"]
+    environment:
+      - "SOME_ENV=some_env"
+    stdin_open: true
+    container_name: api
