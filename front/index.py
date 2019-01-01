@@ -2,9 +2,11 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def home():
     return render_template("home.html")
+
 
 @app.route("/english")
 def english():
@@ -12,5 +14,5 @@ def english():
 
 
 if __name__ == "__main__":
-    app.run(host='localhost', port=8080,debug=True)
+    app.run(host='0.0.0.0', debug=True)
 
