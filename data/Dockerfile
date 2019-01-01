@@ -8,7 +8,5 @@ RUN apt-get update
 RUN apt-get install -y iputils-ping
 RUN apt install -y python3.6 python3-pip
 
-RUN pip3 install flask
-RUN pip3 install requests
-
 RUN mkdir /app
+

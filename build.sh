@@ -1,2 +1,2 @@
-docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && \
-cd api && docker build -t api .
+cd api && sudo docker build -t api . && \
+cd ../data && sudo docker build -t data .
