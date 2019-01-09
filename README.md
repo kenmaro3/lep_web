@@ -2,7 +2,7 @@
 
 ssh to ec2 instance and then,
 
-'''sudo docker pull kenmaro/lep_web:0.1.0'''
-'''sudo docker container run -itd -p 80:8080'''
+```sudo docker pull kenmaro/lep_web:0.1.0```
+```sudo docker container run -itd -p 80:8080 kenmaro/lep_web:0.1.0```
 
 http://<public DNS of ec2 instance>
