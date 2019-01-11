@@ -1,9 +1,9 @@
 from flask import Flask, render_template
-import ssl
+#import ssl
 
 app = Flask(__name__)
-context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
-context.load_cert_chain('cert.crt', 'server_secret.key')
+#context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+#context.load_cert_chain('cert.crt', 'server_secret.key')
 
 @app.route("/")
 def home():
