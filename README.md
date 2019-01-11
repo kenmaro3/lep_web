@@ -1,13 +1,10 @@
 # lep_web
 
-ssh to ec2 instance and then,
+userful website
 
-```sudo docker pull kenmaro/lep_web:0.1.0```  
-```sudo docker container run -itd -p 80:8080 kenmaro/lep_web:0.1.0```   
-```sudo docker stop $(sudo docker ps -aq)```  
-```sudo docker rm $(sudo docker ps -aq)```  
-```sudo docker rmi $(sudo docker images -aq)```  
-```sudo docker container commit df3b4cd6c643 kenmaro/lep_web:0.1.2 ```  
-``` sudo docker push kenmaro/lep_web:0.1.2 ```  
+- to find a password for wordpress
+https://docs.bitnami.com/aws/faq/get-started/find-credentials/
 
-http://<public DNS of ec2 instance>
+ - to allow the https for flask+wsgi
+https://own-search-and-study.xyz/2018/07/21/%E7%84%A1%E6%96%99%E3%81%A7https%E5%AF%BE%E5%BF%9C%E3%81%97%E3%81%9F%E8%87%AA%E4%BD%9Cweb%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%85%AC%E9%96%8B%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/
+
