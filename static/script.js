@@ -1,5 +1,6 @@
 /* eslint-disable require-jsdoc */
 $(function() {
+
   // Peer object
   const peer = new Peer({
     key:   window.__SKYWAY_KEY__,
