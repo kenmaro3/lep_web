@@ -52,11 +52,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>git</find>
-      <find>connect</find>
-      <find>step1</find>
-      <find>make-call</find>
-      <find>console.log</find>
       <find>your id</find>
       <find>make-rando</find>
       <find>step3</find>
@@ -75,9 +70,17 @@
       <find>che</find>
       <find>existingCall</find>
       <find>touch</find>
-      <find>userna</find>
+      <find>img</find>
+      <find>fonts</find>
+      <find>image</find>
+      <find>home</find>
+      <find>Printing</find>
+      <find>images</find>
+      <find>Neos</find>
+      <find>LEP</find>
+      <find>L</find>
       <find>translate-button</find>
-      <find>make-random-call</find>
+      <find>English</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -100,9 +103,8 @@
         <option value="$PROJECT_DIR$/front/index.py" />
         <option value="$PROJECT_DIR$/front/templates/home.html" />
         <option value="$PROJECT_DIR$/front/static/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/work.html" />
         <option value="$PROJECT_DIR$/index.py" />
-        <option value="$PROJECT_DIR$/static/script.js" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
