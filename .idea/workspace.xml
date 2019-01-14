@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511ac3c6-2a49-49e8-8408-7f0147822f9a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/style_for_room.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/css/style_for_group.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/script_for_group.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/script_test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/index_test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/test_group.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style_for_home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style_for_room.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style_for_room.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,41 +22,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.py">
+        <entry file="file://$PROJECT_DIR$/static/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="513">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/script_home.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/static/script_test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+            <state relative-caret-position="191">
+              <caret line="335" selection-start-line="335" selection-end-line="341" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/style_for_home.css">
+        <entry file="file://$PROJECT_DIR$/static/script_for_group.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8931" />
+            <state relative-caret-position="382">
+              <caret line="28" column="21" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="21" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
+        <entry file="file://$PROJECT_DIR$/templates/index_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="51" column="57" selection-start-line="51" selection-start-column="57" selection-end-line="51" selection-end-column="57" />
-              <folding>
-                <element signature="e#412#419#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -59,17 +65,43 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/style_for_room.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="520" column="1" selection-start-line="520" selection-start-column="1" selection-end-line="520" selection-end-column="1" />
+            <state relative-caret-position="383">
+              <caret line="554" column="13" selection-start-line="554" selection-start-column="13" selection-end-line="554" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/script.js">
+        <entry file="file://$PROJECT_DIR$/static/key.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="276">
+              <caret line="41" selection-start-line="41" selection-start-column="2" selection-end-line="45" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/test_group.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" selection-start-line="17" selection-end-line="21" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="86" column="28" selection-end-line="199" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -86,24 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>your id</find>
-      <find>make-rando</find>
-      <find>step3</find>
-      <find>random-</find>
-      <find>Your id</find>
-      <find>rid</find>
-      <find>navigator</find>
-      <find>audioSource</find>
-      <find>localstream</find>
-      <find>setVideoEna</find>
-      <find>setvide</find>
-      <find>constraint</find>
-      <find>constra</find>
-      <find>my-id</find>
-      <find>my-vide</find>
-      <find>che</find>
-      <find>existingCall</find>
-      <find>touch</find>
       <find>img</find>
       <find>fonts</find>
       <find>image</find>
@@ -114,7 +128,26 @@
       <find>LEP</find>
       <find>L</find>
       <find>English</find>
+      <find>.active</find>
+      <find>List</find>
       <find>translate-button</find>
+      <find>peer</find>
+      <find>MAX_MEMBER</find>
+      <find>send</find>
+      <find>step1</find>
+      <find>step2</find>
+      <find>autoJoinRoom</find>
+      <find>myId</find>
+      <find>key</find>
+      <find>loglist</find>
+      <find>step1 was</find>
+      <find>make-random</find>
+      <find>call</find>
+      <find>make</find>
+      <find>autojoin</find>
+      <find>joinroom</find>
+      <find>addro</find>
+      <find>make-ran</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,10 +170,16 @@
         <option value="$PROJECT_DIR$/front/templates/home.html" />
         <option value="$PROJECT_DIR$/front/static/css/style.css" />
         <option value="$PROJECT_DIR$/templates/work.html" />
-        <option value="$PROJECT_DIR$/index.py" />
         <option value="$PROJECT_DIR$/templates/home.html" />
-        <option value="$PROJECT_DIR$/static/css/style_for_room.css" />
+        <option value="$PROJECT_DIR$/static/css/style_for_group.css" />
+        <option value="$PROJECT_DIR$/static/script_for_group.js" />
+        <option value="$PROJECT_DIR$/templates/test_group.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/css/style_for_room.css" />
+        <option value="$PROJECT_DIR$/static/script.js" />
+        <option value="$PROJECT_DIR$/index.py" />
+        <option value="$PROJECT_DIR$/templates/index_test.html" />
+        <option value="$PROJECT_DIR$/static/script_test.js" />
       </list>
     </option>
   </component>
@@ -239,11 +278,7 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/like_button.js" />
     <entry file="file://$PROJECT_DIR$/key.js" />
-    <entry file="file://$PROJECT_DIR$/static/script_home.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dockerfile" />
     <entry file="file://$PROJECT_DIR$/docker-compose.yml" />
     <entry file="file://$PROJECT_DIR$/build.sh" />
@@ -253,23 +288,6 @@
     <entry file="file://$PROJECT_DIR$/api/Dockerfile" />
     <entry file="file://$PROJECT_DIR$/data/Dockerfile" />
     <entry file="file://$PROJECT_DIR$/front/static/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style_for_home.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8931" />
@@ -285,17 +303,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/like_button.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style_for_group.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="46" column="1" lean-forward="true" selection-end-line="68" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/script_home.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/test_group.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style_for_room.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="520" column="1" selection-start-line="520" selection-start-column="1" selection-end-line="520" selection-end-column="1" />
+        <state relative-caret-position="383">
+          <caret line="554" column="13" selection-start-line="554" selection-start-column="13" selection-end-line="554" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/key.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+        <state relative-caret-position="268">
+          <caret line="86" column="28" selection-end-line="199" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="41" selection-start-line="41" selection-start-column="2" selection-end-line="45" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/script_for_group.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/script_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="335" selection-start-line="335" selection-end-line="341" selection-end-column="9" />
         </state>
       </provider>
     </entry>
