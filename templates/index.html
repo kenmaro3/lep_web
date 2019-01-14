@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Language" content="en-us">
 
-  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style_for_room.css">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
   <script type=text/javascript src="{{ url_for('static', filename='script.js') }}"></script>
@@ -14,6 +14,22 @@
 </head>
 
 <body>
+
+<!--<input type="text" class="form-control" id="input-text" placeholder="Please input text">-->
+<!--<button class="btn btn-default" id="translate-button">Change text</button>-->
+<!--<form class='ajax_submit' id="translate" method="post" action="/toPostURL">-->
+  <!--<input type="text" name="input_text">-->
+  <!--<button href="#" type="submit">Submit</button>-->
+<!--</form>-->
+<input type="text" class="form-control" id="input-text" placeholder="please input the text">
+<button class="btn btn-default" id="testbutton">submit</button>
+<div id="result"></div>
+
+<!--<form class='ajax_submit' method="post" action="/toPostURL">-->
+  <!--<input type="text" name="username">-->
+  <!--<input type="text" name="age">-->
+  <!--<button id="testbutton">Submit</button>-->
+<!--</form>-->
 
 <div class="pure-g">
 
