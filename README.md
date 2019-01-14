@@ -22,3 +22,14 @@ https://pypi.org/project/google-cloud-translate/
 
 - to set the environmental valueables  
 /etc/apache2/envvars
+
+- to see the errorlog for apache2  
+/var/log/apache2/error_log
+
+- to set the GCP service account  
+export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
+
+- when got error **locale.Error: unsupported locale setting**
+export LC_ALL="en_US.UTF-8"  
+export LC_CTYPE="en_US.UTF-8"   
+sudo dpkg-reconfigure locales  
