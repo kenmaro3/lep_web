@@ -1,5 +1,14 @@
 # lep_web
 
+
+## commit rule
+### commit message category
+- [ADD] : New feature/file added
+- [UPD] : Code has been modified
+- [DEL] : File deleted
+- [RES] : Conflict resolved
+
+
 userful website
 
 - to find a password for wordpress   
