@@ -29,7 +29,7 @@ https://pypi.org/project/google-cloud-translate/
 - to set the GCP service account  
 export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
 
-- when got error **locale.Error: unsupported locale setting**
+- when got error **locale.Error: unsupported locale setting**  
 export LC_ALL="en_US.UTF-8"  
 export LC_CTYPE="en_US.UTF-8"   
 sudo dpkg-reconfigure locales  
