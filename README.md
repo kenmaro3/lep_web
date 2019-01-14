@@ -26,8 +26,8 @@ https://pypi.org/project/google-cloud-translate/
 - to see the errorlog for apache2  
 /var/log/apache2/error_log
 
-- to set the GCP service account  
-export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
+- to set the environmental valuable for wsgi, need to write in **wsgi.py**, for example,
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/var/www/flask/.gcp/my_service_account_file_name'
 
 - when got error **locale.Error: unsupported locale setting**  
 export LC_ALL="en_US.UTF-8"  
