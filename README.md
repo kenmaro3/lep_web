@@ -9,7 +9,7 @@
 - [RES] : Conflict resolved
 
 
-## userful website
+## userful notes
 
 - to find a password for wordpress   
 https://docs.bitnami.com/aws/faq/get-started/find-credentials/
@@ -20,5 +20,5 @@ https://own-search-and-study.xyz/2018/07/21/%E7%84%A1%E6%96%99%E3%81%A7https%E5%
 - to implement the google-cloud-translate  
 https://pypi.org/project/google-cloud-translate/
 
-
-
+- to set the environmental valueables  
+/etc/apache2/envvars
