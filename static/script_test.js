@@ -4,7 +4,7 @@ $(function() {
 let myId = null;
 let myRoom = null;
 roomMembers = [];
-const MAX_ROOM_NO = 10;
+const MAX_ROOM_NO = 5;
 const MAX_MEMBER = 2;
 let tryRoomNo = 1;
 let tryAutoJoin = false;
@@ -64,6 +64,14 @@ tryRoomNo = 1;
       });
 
     });
+
+
+autoJoinButton.onclick = _ => {
+    addLog('Try Auto Join Start.');
+    tryRoomNo = 1;
+    autoJoinRoom();
+}
+
 
 
 
@@ -297,7 +305,7 @@ console.log('after the for loop');
     step2();
   });
 
-  // Retry if getUserMedia fails
+//   Retry if getUserMedia fails
   $('#step1-retry').on('click', () => {
     $('#step1-error').hide();
     step1();
@@ -415,7 +423,7 @@ console.log('after the for loop');
   })
 
   function step1() {
-    // Get audio/video stream
+//     Get audio/video stream
     const audioSource = $('#audioSource').val();
     const videoSource = $('#videoSource').val();
     const constraints = {
