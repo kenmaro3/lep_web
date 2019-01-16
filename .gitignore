@@ -1,3 +1,2 @@
-server_pub.csr
-server_secret.key
-cert.crt
+set_env.sh
+.idea/
