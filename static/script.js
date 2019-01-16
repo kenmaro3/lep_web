@@ -1,5 +1,11 @@
 /* eslint-disable require-jsdoc */
 $(function() {
+  
+  console.log('at least starts here');
+  $.ajax({
+    url: '/line_notice_english',
+    type: 'post'
+  });
 
   // Peer object
   const peer = new Peer({
