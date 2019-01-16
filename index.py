@@ -30,7 +30,7 @@ def home():
 
 @app.route("/english")
 def english():
-    return render_template("index.html")
+    return render_template("index_test.html")
 
 @app.route("/line_notice_english", methods=['POST'])
 def line_notice_english():
@@ -49,6 +49,16 @@ def testfunc():
     return_data = {"result":translatedText}
     return jsonify(ResultSet=json.dumps(return_data))
 
+
+# @app.route('/manageList')
+# def manageList():
+#     global mlist
+#     mlist.append(random.randint(1,5))
+#     return mlist
+
+
+
+
 # @app.route('/toPostURL', methods=['POST'])
 # def get_user_info():
 #     username =  request.form['username'];
@@ -56,6 +66,10 @@ def testfunc():
 #     response = Response()
 #     response.status_code = 200
 #     return response
+
+@app.route('/group')
+def group():
+    return render_template("test_group.html")
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
