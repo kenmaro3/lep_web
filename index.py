@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify
 from flask import request, Response
 from google.cloud import translate
 import json
+import os
 #import ssl
 from flask import Flask, render_template, Response
 from flask import request, abort
