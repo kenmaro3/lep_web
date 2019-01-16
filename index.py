@@ -2,12 +2,26 @@ from flask import Flask, render_template, jsonify
 from flask import request, Response
 from google.cloud import translate
 import json
-import random
+import os
 #import ssl
+from flask import Flask, render_template, Response
+from flask import request, abort
+
+from linebot import (
+    LineBotApi, WebhookHandler
+)
+from linebot.exceptions import (
+    InvalidSignatureError
+)
+from linebot.models import (
+    MessageEvent, TextMessage, TextSendMessage,
+)
 
 app = Flask(__name__)
 #context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
 #context.load_cert_chain('cert.crt', 'server_secret.key')
+line_bot_api = LineBotApi(os.getenv("CHANNEL_ACCESS_TOKEN"))
+handler = WebhookHandler(os.getenv("CHANNEL_SECRET"))
 
 @app.route("/")
 def home():
@@ -16,18 +30,15 @@ def home():
 
 @app.route("/english")
 def english():
-    return render_template("index_test.html")
+    return render_template("index.html")
 
-# @app.route('/toPostURL', methods=['POST'])
-# def get_user_info():
-#     client = translate.Client(target_language='en')
-#     sentence = request.form['input_text']
-#     translated = client.translate(sentence)
-#     translatedText = translated["translatedText"]
-#
-#     # resp = jsonify({"success":True, "result":translatedText})
-#     # resp.status_code = 200
-#     return jsonify(ResultSet=json.dumps(translated))
+@app.route("/line_notice_english", methods=['POST'])
+def line_notice_english():
+    to = os.getenv("MY_USER_ID")
+    line_bot_api.push_message(to, TextSendMessage(text="one learner came in English room!! You can also join from https://www.leplat4m.com/english"))
+    response = Response()
+    response.status_code=200
+    return response
 
 @app.route('/toPostURL', methods=['POST'])
 def testfunc():
