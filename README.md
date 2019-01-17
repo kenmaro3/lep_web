@@ -38,3 +38,6 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/var/www/flask/.gcp/my_service_a
 export LC_ALL="en_US.UTF-8"  
 export LC_CTYPE="en_US.UTF-8"   
 sudo dpkg-reconfigure locales  
+
+- when you want to pip install for flask on wsgi and apache, need to set full path  
+sudo /var/www/flask/env/bin/pip3.5 install <some library>
