@@ -11,25 +11,27 @@
   <script type="text/javascript" src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
   <script type=text/javascript src="{{ url_for('static', filename='script.js') }}"></script>
   <script type=text/javascript src="{{ url_for('static', filename='key.js') }}"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-<!--<input type="text" class="form-control" id="input-text" placeholder="Please input text">-->
-<!--<button class="btn btn-default" id="translate-button">Change text</button>-->
-<!--<form class='ajax_submit' id="translate" method="post" action="/toPostURL">-->
-  <!--<input type="text" name="input_text">-->
-  <!--<button href="#" type="submit">Submit</button>-->
-<!--</form>-->
+<button id="roommember">room member</button>
+
+
+<!--Room Join button and show the member in the room-->
+<div id="myIdDisp"></div>
+<div id="desc"></div>
+<button id="autoJoinButton">自動入室</button>
+<div id="roomList"></div>
+<!--<div id="logList"></div>-->
+
+
+<!--User tool for translation to english-->
 <input type="text" class="form-control" id="input-text" placeholder="please input the text">
 <button class="btn btn-default" id="testbutton">submit</button>
 <div id="result"></div>
 
-<!--<form class='ajax_submit' method="post" action="/toPostURL">-->
-  <!--<input type="text" name="username">-->
-  <!--<input type="text" name="age">-->
-  <!--<button id="testbutton">Submit</button>-->
-<!--</form>-->
 
 <div class="pure-g">
 
