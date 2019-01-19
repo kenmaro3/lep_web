@@ -23,17 +23,17 @@ $(function() {
       roomNameLabel.textContent = roomName;
       roomMemberListTitle.textContent = 'ルームメンバー';
       roomMemberList.id = `${roomName}MemberList`;
-      connectRoomButton.textContent = '入室';
-      connectRoomButton.dataset.roomName = roomName;
+//      connectRoomButton.textContent = '入室';
+//      connectRoomButton.dataset.roomName = roomName;
       room.classList.add('room');
       roomNameLabel.classList.add('room-name');
       roomMemberListTitle.classList.add('room-memberlisttitle');
       roomMemberList.classList.add('room-memberlist');
-      connectRoomButton.classList.add('connect-room-button');
+//      connectRoomButton.classList.add('connect-room-button');
       room.appendChild(roomNameLabel);
       room.appendChild(roomMemberListTitle);
       room.appendChild(roomMemberList);
-      room.appendChild(connectRoomButton);
+//      room.appendChild(connectRoomButton);
       roomList.appendChild(room);
 
       connectRoomButton.onclick = function(evt) {
@@ -44,19 +44,19 @@ $(function() {
 
 
   //  Auto join button handler
-  autoJoinButton.onclick = _ => {
-    addLog('Try Auto Join Start.');
-    tryRoomNo = 1;
-    autoJoinRoom();
-  }
+//  autoJoinButton.onclick = _ => {
+//    addLog('Try Auto Join Start.');
+//    tryRoomNo = 1;
+//    autoJoinRoom();
+//  }
 
 
   //Show the room member handler
-  $("#roommember").click(function(){
-    console.log('roombutton is clicked');
-
-    console.log(roomMembers);
-  });
+//  $("#roommember").click(function(){
+//    console.log('roombutton is clicked');
+//
+//    console.log(roomMembers);
+//  });
 
 
   //====================================================================================================================
@@ -119,8 +119,8 @@ $(function() {
 
     addLog('Peer Open.');
     peer.listAllPeers(peers => {
-      $('#peers').text(peers);
-      $('#num-of-peers').text(peers.length);
+//      $('#peers').text(peers);
+//      $('#num-of-peers').text(peers.length);
 
     });
     console.log('step1 will be called');
