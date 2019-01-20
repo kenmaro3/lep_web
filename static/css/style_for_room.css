@@ -746,11 +746,11 @@ html, body {
       font-size: 80%;
     }
     .title1{
-      font-size: 20px;
+      font-size: 32px;
       font-weight: bold;
     }
     .title2{
-      font-size: 16px;
+      font-size: 26px;
       font-weight: bold;
     }
 }
@@ -790,7 +790,7 @@ html, body {
     }
 
     #box{
-      font-size: 30%;
+      font-size: 40%;
       background: #FFD700;
       padding 10px;
       text-align: center;
@@ -799,22 +799,22 @@ html, body {
     }
 
     .callToId{
-      font-size: 60%;
+      font-size: 80%;
     }
 
     .callToRandom{
-      font-size: 60%;
+      font-size: 80%;
     }
     .textSend{
 
-      font-size: 60%;
+      font-size: 80%;
     }
     .title1{
-      font-size: 16px;
+      font-size: 24px;
       font-weight: bold;
     }
     .title2{
-      font-size: 12px;
+      font-size: 18px;
       font-weight: bold;
     }
 }
