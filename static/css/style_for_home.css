@@ -706,7 +706,7 @@ header #fh5co-main-nav > ul li:first-child {
   background: rgba(240, 56, 97, 0.9);
   opacity: 0;
 }
-.fh5co-grid-work .work-holder .inner-overlay i {
+.fh5co-grid-work .work-holder .inner-overlay i{
   position: absolute;
   top: 50%;
   left: 50%;
