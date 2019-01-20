@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="511ac3c6-2a49-49e8-8408-7f0147822f9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style_for_home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style_for_home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style_for_room.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style_for_room.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,32 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/style_for_room.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="647">
-              <caret line="310" column="21" selection-start-line="310" selection-start-column="16" selection-end-line="310" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="95" column="37" selection-start-line="95" selection-start-column="37" selection-end-line="95" selection-end-column="37" />
-              <folding>
-                <element signature="e#412#419#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/css/style_for_home.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="708" column="46" selection-start-line="708" selection-start-column="46" selection-end-line="708" selection-end-column="46" />
+            <state>
+              <caret line="46" column="6" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -122,8 +97,8 @@
       <find>text chat</find>
       <find>hove</find>
       <find>inner-overlay</find>
-      <find>/english</find>
       <find>hover</find>
+      <find>/english</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,9 +131,9 @@
         <option value="$PROJECT_DIR$/question.csv" />
         <option value="$PROJECT_DIR$/static/script.js" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/static/css/style_for_room.css" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/static/css/style_for_home.css" />
+        <option value="$PROJECT_DIR$/static/css/style_for_room.css" />
       </list>
     </option>
   </component>
@@ -349,6 +324,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style_for_home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="708" column="46" selection-start-line="708" selection-start-column="46" selection-end-line="708" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -361,15 +343,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style_for_room.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="310" column="21" selection-start-line="310" selection-start-column="16" selection-end-line="310" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style_for_home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="708" column="46" selection-start-line="708" selection-start-column="46" selection-end-line="708" selection-end-column="46" />
+        <state>
+          <caret line="46" column="6" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="6" />
         </state>
       </provider>
     </entry>
