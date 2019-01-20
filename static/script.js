@@ -21,7 +21,7 @@ $(function() {
       const connectRoomButton = document.createElement('button');
       const roomName = `Room_${i}`;
       roomNameLabel.textContent = roomName;
-      roomMemberListTitle.textContent = 'ルームメンバー';
+      roomMemberListTitle.textContent = 'Room Member';
       roomMemberList.id = `${roomName}MemberList`;
 //      connectRoomButton.textContent = '入室';
 //      connectRoomButton.dataset.roomName = roomName;
@@ -89,6 +89,28 @@ $(function() {
       }
 
     });
+
+  });
+
+
+  //====================================================================================================================
+  // TopicDispenser
+    $("#topicDispenser").click(function(){
+    console.log('topicDispenser is clicked');
+
+//    $.ajax({
+//      url: '/topicDispenser',
+//      type: 'get',
+//
+//      success:function(data){
+//        console.log('i am called');
+//        var result = 'something'
+//        $("#topicShow").text(result);
+//      }
+//
+//    });
+
+    $("#topicShow").text("somehting to show");
 
   });
 
@@ -566,7 +588,7 @@ $(function() {
     // Handle a chat connection.
     if (c.label === 'chat') {
       const chatbox = $('<div></div>').addClass('connection').addClass('active').attr('id', c.remoteId);
-      const header = $('<h1></h1>').html('Chat with <strong>' + c.remoteId + '</strong>');
+      const header = $('<div></div>').html('Chat with <strong>' + c.remoteId + '</strong>');
       const messages = $('<div><em>Peer connected.</em></div>').addClass('messages');
       chatbox.append(header);
       chatbox.append(messages);
