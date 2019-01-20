@@ -30,7 +30,7 @@ def home():
 
 @app.route("/english")
 def english():
-    return render_template("index_test.html")
+    return render_template("index.html")
 
 @app.route("/line_notice_english", methods=['POST'])
 def line_notice_english():
