@@ -13,7 +13,7 @@ $(function() {
 
   //create the room on top of the screen
 
-  def createRoomList(){
+  function createRoomList(){
     console.log('before the for loop');
     for(let i = 1; i <= MAX_ROOM_NO; i++){
         const room = document.createElement('div');
