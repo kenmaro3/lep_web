@@ -83,6 +83,9 @@ $(function() {
         type: 'post'
       });
 
+    document.getElementById("send-notice-button").disabled = true;
+    $("#notice-button-text").text("Sended!");
+
   });
 
 
