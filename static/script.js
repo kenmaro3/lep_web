@@ -1,6 +1,8 @@
 /* eslint-disable require-jsdoc */
 $(function() {
 
+  var receiveCall = false;
+
   //====================================================================================================================
   //for the room
   let myId = null;
@@ -13,7 +15,7 @@ $(function() {
 
   //create the room on top of the screen
 
-  def createRoomList(){
+  function createRoomList(){
     console.log('before the for loop');
     for(let i = 1; i <= MAX_ROOM_NO; i++){
         const room = document.createElement('div');
@@ -88,7 +90,6 @@ $(function() {
   //  Translation button handler
   $("#translation-button").click(function(){
     console.log('translation button is clicked');
-
     var textData = JSON.stringify({"text":$("#input-text").val()});
     console.log(textData);
 
@@ -293,6 +294,7 @@ $(function() {
   });
 
     function getin() {
+    receiveCall = true;
     $('#first-to-show').hide();
     $('#second-to-show').show();
     $('#step2').show();
@@ -306,9 +308,13 @@ $(function() {
   console.log(roomMembers);
   // Receiving a call
   peer.on('call', call => {
-    // Answer the call automatically (instead of prompting user) for demo purposes
-    call.answer(localStream);
-    step3(call);
+    if(receiveCall){
+      call.answer(localStream);
+      step3(call);
+    }else{
+      return false;
+    }
+
   });
 
   peer.on('error', err => {
