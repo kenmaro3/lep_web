@@ -12,47 +12,36 @@ $(function() {
   let tryAutoJoin = false;
 
   //create the room on top of the screen
+  console.log('before the for loop');
+  for(let i = 1; i <= MAX_ROOM_NO; i++){
+      const room = document.createElement('div');
+      const roomNameLabel = document.createElement('h3');
+      const roomMemberListTitle = document.createElement('div');
+      const roomMemberList = document.createElement('div');
+      const connectRoomButton = document.createElement('button');
+      const roomName = `Room_${i}`;
+      roomNameLabel.textContent = roomName;
+      roomMemberListTitle.textContent = 'Room Member';
+      roomMemberList.id = `${roomName}MemberList`;
+//      connectRoomButton.textContent = '入室';
+//      connectRoomButton.dataset.roomName = roomName;
+      room.classList.add('room');
+      roomNameLabel.classList.add('room-name');
+      roomMemberListTitle.classList.add('room-memberlisttitle');
+      roomMemberList.classList.add('room-memberlist');
+//      connectRoomButton.classList.add('connect-room-button');
+      room.appendChild(roomNameLabel);
+      room.appendChild(roomMemberListTitle);
+      room.appendChild(roomMemberList);
+//      room.appendChild(connectRoomButton);
+      roomList.appendChild(room);
 
-  def createRoomList(){
-    console.log('before the for loop');
-    for(let i = 1; i <= MAX_ROOM_NO; i++){
-        const room = document.createElement('div');
-        const roomNameLabel = document.createElement('h3');
-        const roomMemberListTitle = document.createElement('div');
-        const roomMemberList = document.createElement('div');
-        const connectRoomButton = document.createElement('button');
-        const roomName = `Room_${i}`;
-        roomNameLabel.textContent = roomName;
-        roomMemberListTitle.textContent = 'Room Member';
-        roomMemberList.id = `${roomName}MemberList`;
-  //      connectRoomButton.textContent = '入室';
-  //      connectRoomButton.dataset.roomName = roomName;
-        room.classList.add('room');
-        roomNameLabel.classList.add('room-name');
-        roomMemberListTitle.classList.add('room-memberlisttitle');
-        roomMemberList.classList.add('room-memberlist');
-  //      connectRoomButton.classList.add('connect-room-button');
-        room.appendChild(roomNameLabel);
-        room.appendChild(roomMemberListTitle);
-        room.appendChild(roomMemberList);
-  //      room.appendChild(connectRoomButton);
-        roomList.appendChild(room);
+      connectRoomButton.onclick = function(evt) {
+          joinRoom(this.dataset.roomName);
+      }
+  }
+  console.log('after the for loop');
 
-        connectRoomButton.onclick = function(evt) {
-            joinRoom(this.dataset.roomName);
-        }
-    }
-    console.log('after the for loop');
-
-  };
-
-  createRoomList();
-
-
-//  $('#refreshRoomList').click(function(){
-//    console.log('refreshRoomList is clicked');
-//    createRoomList();
-//  });
 
   //  Auto join button handler
 //  autoJoinButton.onclick = _ => {
@@ -72,22 +61,16 @@ $(function() {
 
   //====================================================================================================================
   //Line notification handler
-
-    $("#send-notice-button").click(function(){
-    console.log('send-notice-button is clicked');
-
-      $.ajax({
-        url: '/line_notice_english',
-        type: 'post'
-      });
-
-  });
-
+  //  console.log('at least starts here');
+  //  $.ajax({
+  //    url: '/line_notice_english',
+  //    type: 'post'
+  //  });
 
   //====================================================================================================================
   //  Translation button handler
-  $("#translation-button").click(function(){
-    console.log('translation button is clicked');
+  $("#testbutton").click(function(){
+    console.log('button is clicked');
 
     var textData = JSON.stringify({"text":$("#input-text").val()});
     console.log(textData);
@@ -162,9 +145,9 @@ $(function() {
 //      $('#num-of-peers').text(peers.length);
 
     });
-
+    console.log('step1 will be called');
     step1();
-
+    console.log('step1 was called');
   });
 
   //====================================================================================================================
@@ -259,44 +242,6 @@ $(function() {
       const div = document.createElement('div');
       div.textContent = `[${time}] ${msg}`;
   //    logList.insertBefore(div, logList.firstChild);
-  }
-
-
-
-  //====================================================================================================================
-  // Get in handler
-
-    // Get-in-button is clicked!
-    $("#get-in-button").click(function(){
-    console.log('get-in-button is clicked');
-    var pairList = new Array();
-    for (var i=0; i<roomMembers.length; i++){
-
-      if(roomMembers[i] != peer.id){
-        pairList.push(roomMembers[i]);
-      }else{
-      }
-    }
-
-    if(pairList.length != 0){
-      var pairId = pairList[Math.floor(Math.random() * pairList.length)];
-      $('#pair-id').text(pairList);
-
-      getin();
-
-    }else{
-      alert('No one is in the room. If you need someones help now, click [Send the notice to teacher]');
-    };
-
-
-
-  });
-
-    function getin() {
-    $('#first-to-show').hide();
-    $('#second-to-show').show();
-    $('#step2').show();
-    $('#step3').hide();
   }
 
 

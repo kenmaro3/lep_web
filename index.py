@@ -35,7 +35,7 @@ def english():
 @app.route("/line_notice_english", methods=['POST'])
 def line_notice_english():
     to = os.getenv("MY_USER_ID")
-    line_bot_api.push_message(to, TextSendMessage(text="one learner came in English room!! Please help him/her through https://www.leplat4m.com/english"))
+    line_bot_api.push_message(to, TextSendMessage(text="one learner came in English room!! You can also join from https://www.leplat4m.com/english"))
     response = Response()
     response.status_code=200
     return response
