@@ -16,9 +16,8 @@
 </head>
 
 <body>
-<div class="layerTransparent">
-<div class="row" id="first-to-show">
-  <div class="titleMenu col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color: rgba(255,255,255,0.4); text-align: center;">
+<div class="row">
+  <div class="titleMenu col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10">
     <div class="title1">Language Exchange Platform</div>
     <div class="title2">Video Chat</div>
     <!--<button id="roommember">room member</button>-->
@@ -26,185 +25,172 @@
 
     <!--Room Join button and show the member in the room-->
     <div id="myIdDisp"></div>
-    <br />
+    <p>Share this id with others so they can call you.</p>
     <!--<div id="desc"></div>-->
     <!--<button id="autoJoinButton">自動入室</button>-->
-
-  </div>
-
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color: rgba(255,255,255,0.4); text-align: center;">
-    <button class="pure-button pure-button-success" id="get-in-button">Start the Chat</button>
-    <div id="pair-id"></div>
-    <br />
-    <p>If there is nobody in your room, ask someone to come :)</p>
-    <button class="pure-button pure-button-success" id="send-notice-button">Send the notice to teacher</button>
-    <!--<button id="refreshRoomList">Refresh room list</button>-->
-  </div>
-
-  <div class="titleMenu col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color: rgba(255,255,255,0.4); text-align: center;">
-    <div class="center">
-      <div id="roomList" style="padding-left: 40px;"></div>
-      <!--<div id="logList"></div>-->
-    </div>
-
+    <div id="roomList"></div>
+    <!--<div id="logList"></div>-->
   </div>
 </div>
 
 
-<div id="second-to-show">
-  <div class="row" style="margin-top: 20px;">
 
-    <!-- Make calls to others -->
-      <div id="step2" style="background-color: rgba(255,255,255,0.2); text-align: center;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <!--<p>Your id: <span id="my-id">...</span></p>-->
-        <!--<div>-->
-          <!--# of people now: <span id="num-of-peers">...</span>,-->
-          <!--Peers: <span id="peers">...</span>-->
-        <!--</div>-->
+<div class="row" style="margin-top: 20px;">
 
-          <div class="callToId">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h4>Call to ID</h4>
-            </div>
+  <!-- Make calls to others -->
+    <div id="step2" style="background-color: #eee;" class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10">
+      <!--<p>Your id: <span id="my-id">...</span></p>-->
+      <!--<div>-->
+        <!--# of people now: <span id="num-of-peers">...</span>,-->
+        <!--Peers: <span id="peers">...</span>-->
+      <!--</div>-->
 
-            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-              <form id="make-call" class="pure-form">
-                <input type="text" placeholder="Call user id..." id="callto-id">
-                <button href="#" class="pure-button pure-button-success" type="submit">Call</button>
-              </form>
-            </div>
+        <div class="callToId">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h4>Call to ID</h4>
           </div>
 
-          <div class="callToRandom" style="padding-top: 20px;">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <h4>Call to Room mate</h4>
-            </div>
-
-            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" style="padding-bottom: 10px;">
-              <form id="make-random-call" class="pure-form">
-                <p>Let's find a mate you can practice with!!</p>
-                <button href="#" class="pure-button pure-button-success" type="submit">Random Call</button>
-
-              </form>
-            </div>
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <form id="make-call" class="pure-form">
+              <input type="text" placeholder="Call user id..." id="callto-id">
+              <button href="#" class="pure-button pure-button-success" type="submit">Call</button>
+            </form>
           </div>
-      </div>
-
-      <div style="background-color: rgba(255,255,255,0.4); text-align: center;">
-        <div class="row" id="step3">
-            <!-- Call in progress -->
-
-            <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-1" >
-              <div>Currently in call with <span id="their-id">...</span> !! </div>
-              <div><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></div>
-              <!--###############-->
-
-            </div>
-
-            <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
-                You want some topics to talk?
-                <button id="topicDispenser">Topic</button>
-                <div id="topicShow"></div>
-            </div>
-
         </div>
-      </div>
 
-    <!-- Video area -->
-    <div class="col-md-10 col-sm-10 col-lg-10 col-xs-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-offset-1" style="margin-top: 10px;">
-      <div class="pure-u-2-3" id="video-container">
-        <div class="">
-          <video id="their-video" autoplay playsinline></video>
-        </div>
-        <div class="">
-          <video id="my-video" muted="true" autoplay playsinline></video>
-          <div class="switch">
-            <label class="switch__label">
-              <input type="checkbox" class="switch__input" id="video-switch" checked="checked"/>
-              <span class="switch__content"></span>
-              <span class="switch__circle"></span>
-            </label>
+        <div class="callToRandom">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h4>Call to Room mate</h4>
           </div>
+
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <form id="make-random-call" class="pure-form">
+              <span>Let's find a mate you can practice with!!</span>
+              <button href="#" class="pure-button pure-button-success" type="submit">Random Call</button>
+
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <div>
+      <div class="row" id="step3">
+          <!-- Call in progress -->
+
+          <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-1" >
+            <div>Currently in call with <span id="their-id">...</span> !! </div>
+            <div><a href="#" class="pure-button pure-button-error" id="end-call">End call</a></div>
+            <!--###############-->
+
+          </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+              You want some topics to talk?
+              <button id="topicDispenser">Topic</button>
+              <div id="topicShow"></div>
+          </div>
+
+      </div>
+    </div>
+
+
+  <div class="pure-g">
+
+  <!-- Video area -->
+  <div class="col-md-10 col-sm-10 col-lg-10 col-xs-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-offset-1" style="margin-top: 10px;">
+    <div class="pure-u-2-3" id="video-container">
+      <div class="col-md-5 col-sm-5">
+        <video id="their-video" autoplay playsinline></video>
+      </div>
+      <div class="col-md-5 col-sm-5">
+        <video id="my-video" muted="true" autoplay playsinline></video>
+        <div class="switch">
+          <label class="switch__label">
+            <input type="checkbox" class="switch__input" id="video-switch" checked="checked"/>
+            <span class="switch__content"></span>
+            <span class="switch__circle"></span>
+          </label>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
 
-  <div class="row" style="margin-top: 20px; background-color:rgba(255,255,255,0.4); text-align: center;">
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
 
-      <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1" style="padding-top: 10px;">
-        <label for="audioSource">Audio input source: </label><select style="margin-left: 10px;" id="audioSource"></select>
+  <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+    <label for="audioSource">Audio input source: </label><select style="margin-left: 10px;" id="audioSource"></select>
+  </div>
+  <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+    <label for="videoSource">Video source: </label><select style="margin-left: 48px;" id="videoSource"></select>
+  </div>
+
+
+  <div class="translate col-md-10 col-sm-10 col-lg-10 col-xs-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-offset-1" style="margin-top: 10px;">
+
+      <div class="col-md-6 col-xs-6 col-sm-6">
+        <input type="text" class="form-control" id="input-text" placeholder="translate input to english!">
+
       </div>
-      <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-        <label for="videoSource">Video source: </label><select style="margin-left: 48px;" id="videoSource"></select>
+      <div class="col-md-2 col-xs-1 col-sm-1">
+        <button class="btn btn-default" id="testbutton">Translate</button>
       </div>
 
+      <div class="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2" id="result"></div>
+
+  </div>
+
+
+  </div>
 
 
 
-    <div class="translate col-md-10 col-sm-10 col-lg-10 col-xs-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-offset-1" style="margin-top: 10px;">
+</div>
 
-        <div class="col-md-7 col-xs-7 col-sm-7 col-md-offset-1 col-xs-offset-1 col-sm-offset-1">
-          <input type="text" class="form-control" id="input-text" placeholder="translate input to english!">
-
-        </div>
-        <div class="col-md-2 col-xs-2 col-sm-2" style="padding-bottom: 10px">
-          <button class="btn btn-default" id="translation-button">Translate</button>
-        </div>
-
-        <div class="col-xs-10 col-sm-10 col-md-10 col-xs-offset-2 col-sm-offset-2 col-md-offset-2" id="result"></div>
-
+<div class="row">
+    <div id="step1" class="col-md-4 col-xs-offset-1 col-sm-offset-1  col-md-offset-1 ">
+      <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>
+      <div id="step1-error">
+        <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click allow when asked for permission by the browser.</p>
+        <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
+      </div>
     </div>
-  </div>
-
-
-  <div class="row">
-      <div id="step1" class="col-md-4 col-xs-offset-1 col-sm-offset-1  col-md-offset-1 ">
-        <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for calls.</p>
-        <div id="step1-error">
-          <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and click allow when asked for permission by the browser.</p>
-          <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
-        </div>
-      </div>
-  </div>
+</div>
 
 
 
-  <!-- From here TEXT CHAT -->
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color: rgba(255,255,255,0.4); margin-top: 20px; margin-bottom: 20px; padding: 20px">
-      <div class="textSend col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-6 col-sm-6 col-md-6 col-lg-6" id="actions">
-        <h4>Text Chat</h4>
-        Your Peer ID is <span id="pid"></span><br>
-        Connect to a peer:
-        <form id="connect">
-          <input type="text" id="rid" placeholder="Someone else's id">
-          <input class="button" type="submit" value="Connect">
-        </form>
-        <br>
-        <br>
-        <form id="send">
-          <input type="text" id="text" placeholder="Enter message">
-          <input class="button" type="submit" value="Send to selected peers">
-        </form>
-        <button id="close">Close selected connections</button>
-      </div>
-
-      <div id="wrap"><div id="textSend connections"><span class="filler">You have not yet
-              made any connections.</span></div>
-        <div class="clear"></div></div>
-
-      <div id="box" class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="">
-        Drag file here to send to active connections.
-      </div>
-
+<!-- From here TEXT CHAT -->
+<div class="row">
+  <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-10 col-sm-10 col-md-10 col-lg-10" style="background-color: #eee; margin-top: 20px; margin-bottom: 20px;">
+    <div class="textSend col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-xs-6 col-sm-6 col-md-6 col-lg-6" id="actions">
+      <h4>Text Chat</h4>
+      Your Peer ID is <span id="pid"></span><br>
+      Connect to a peer:
+      <form id="connect">
+        <input type="text" id="rid" placeholder="Someone else's id">
+        <input class="button" type="submit" value="Connect">
+      </form>
+      <br>
+      <br>
+      <form id="send">
+        <input type="text" id="text" placeholder="Enter message">
+        <input class="button" type="submit" value="Send to selected peers">
+      </form>
+      <button id="close">Close selected connections</button>
     </div>
 
+    <div id="wrap"><div id="textSend connections"><span class="filler">You have not yet
+            made any connections.</span></div>
+      <div class="clear"></div></div>
 
+    <div id="box" class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="">
+      Drag file here to send to active connections.
+    </div>
 
   </div>
+
+
+
 </div>
 
 
@@ -218,7 +204,5 @@
 
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-</div>
 </body>
 </html>
