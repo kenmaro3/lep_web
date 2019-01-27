@@ -97,7 +97,7 @@ Copyright (c) Nicolas Gallagher and Jonathan Neal
 
 
 
-#step1-error, #step2, #step3 {
+#step1-error, #step2, #step3, #second-to-show {
   display: none;
 }
 #my-id {
@@ -694,6 +694,16 @@ html, body {
       font-size: 36px;
       font-weight: bold;
     }
+    #get-in-button{
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+    }
+    #send-notice-button{
+      font-size: 26px;
+      font-weight: bold;
+      text-align: center;
+    }
 
 }
 
@@ -756,10 +766,22 @@ html, body {
     .title1{
       font-size: 32px;
       font-weight: bold;
+      text-align: center;
     }
     .title2{
       font-size: 26px;
       font-weight: bold;
+      text-align: center;
+    }
+    #get-in-button{
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+    }
+    #send-notice-button{
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
     }
 }
 
@@ -824,6 +846,16 @@ html, body {
     .title2{
       font-size: 18px;
       font-weight: bold;
+    }
+    #get-in-button{
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+    }
+    #send-notice-button{
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
     }
 }
 
