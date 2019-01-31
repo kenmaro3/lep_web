@@ -1,3 +1,6 @@
+import random
+import pandas as pd
+import numpy as np
 from flask import Flask, render_template, jsonify
 from flask import request, Response
 from google.cloud import translate
@@ -52,6 +55,14 @@ def testfunc():
 @app.route('/how-to-use', methods=['GET'])
 def how_to_use():
     return render_template("how-to-use.html")
+
+@app.route("/topicDispenser")
+def topic_dispenser():
+    topics = pd.read_csv("./topics.csv", header=None)
+    topics_flatten = np.ravel(topics)
+    picked_topic = random.choice(topics_flatten)
+    return_data = {"result":picked_topic}
+    return jsonify(ResultSet=json.dumps(return_data))
 
 
 @app.route('/group')
