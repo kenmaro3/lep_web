@@ -119,19 +119,19 @@ $(function() {
     $("#topicDispenser").click(function(){
     console.log('topicDispenser is clicked');
 
-//    $.ajax({
-//      url: '/topicDispenser',
-//      type: 'get',
-//
-//      success:function(data){
-//        console.log('i am called');
-//        var result = 'something'
-//        $("#topicShow").text(result);
-//      }
-//
-//    });
+    $.ajax({
+      url: '/topicDispenser',
+      type: 'get',
 
-    $("#topicShow").text("somehting to show");
+      success:function(data){
+        console.log('i am called');
+        var result = JSON.parse(data.ResultSet).result;
+        $("#topicShow").text(result);
+      }
+
+    });
+
+//    $("#topicShow").text("somehting to show");
 
   });
 
