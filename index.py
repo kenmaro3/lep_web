@@ -49,23 +49,10 @@ def testfunc():
     return_data = {"result":translatedText}
     return jsonify(ResultSet=json.dumps(return_data))
 
+@app.route('/how-to-use', methods=['GET'])
+def how_to_use():
+    return render_template("how-to-use.html")
 
-# @app.route('/manageList')
-# def manageList():
-#     global mlist
-#     mlist.append(random.randint(1,5))
-#     return mlist
-
-
-
-
-# @app.route('/toPostURL', methods=['POST'])
-# def get_user_info():
-#     username =  request.form['username'];
-#     age = request.form['age'];
-#     response = Response()
-#     response.status_code = 200
-#     return response
 
 @app.route('/group')
 def group():
